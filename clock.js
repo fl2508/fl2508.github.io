@@ -3,6 +3,7 @@ let secondsRadius;
 let minutesRadius;
 let hoursRadius;
 let clockDiameter;
+var inOut = true;
 
 function setup() {
   createCanvas(720, 400);
@@ -52,5 +53,29 @@ function draw() {
     let y = cy + sin(angle) * secondsRadius;
     vertex(x, y);
   }
+  
+  let millisecond = millis();
+
+  if(frameCount % 60 == 0){
+    if(!inOut){
+      inOut = true;
+    }
+    else if(inOut){
+      inOut = false;
+    } 
+  }
+
+  /*if (clockDiameter < 100) {
+    inOut = true;
+  } */ 
+
+  if (inOut) {
+    clockDiameter++
+  }
+
+  if (!inOut) {
+    clockDiameter--
+  }
+  
   endShape();
 }
