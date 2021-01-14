@@ -6,7 +6,7 @@ let clockDiameter;
 var inOut = true;
 
 function setup() {
-  createCanvas(800,600);
+  createCanvas(1800,1800);
   stroke(255);
 
   let radius = min(width, height) / 2;
