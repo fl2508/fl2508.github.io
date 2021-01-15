@@ -3,23 +3,42 @@ let secondsRadius;
 let minutesRadius;
 let hoursRadius;
 let clockDiameter;
-var inOut = true;
+var state = 1
+var size = 20
+var word = 'inhale'
+var logged = false;
+
 
 function setup() {
-  createCanvas(1800,1800);
+  createCanvas(windowWidth, windowHeight);
+  startAt = millis();
+
   stroke(255);
 
-  let radius = min(width, height) / 2;
-  secondsRadius = radius * 0.71;
+  let radius = min(windowWidth, windowHeight) / 4;
+  secondsRadius = radius * 0.7;
   minutesRadius = radius * 0.6;
   hoursRadius = radius * 0.5;
-  clockDiameter = radius * 1.7;
+  clockDiameter = radius * 1.5;
 
-  cx = width / 2;
-  cy = height / 2;
+  cx = windowWidth / 2;
+  cy = windowHeight / 2;
+
+  r = 47;
+  g = 102;
+  b = 169;
+
 }
 
 function draw() {
+
+  let s = second()
+  if(s == 1){
+	  if(!logged){
+		console.log(minute())
+		logged = true;
+	  }
+  } 
   //background(230);
   background(225);
   textSize(32);
@@ -30,60 +49,108 @@ function draw() {
   fill(0);
   text(second(), 10, 90);
 
+
   // Draw the clock background
   noStroke();
-  fill(244, 122, 158);
+  fill(r + 5 , g + 5, b);
   ellipse(cx, cy, clockDiameter + 25, clockDiameter + 25);
-  fill(237, 34, 93);
+  fill(r, g, b);
   ellipse(cx, cy, clockDiameter, clockDiameter);
+  
+  // Draw circles representing minutes
+  for (let a = 0; a <= minute(); a++) {
+	let minute_angle = radians(a * 6) - HALF_PI;
+    let x = cx + cos(minute_angle) * secondsRadius;
+	let y = cy + sin(minute_angle) * secondsRadius;
+	stroke(238, 241, 252)
+	fill(238, 241, 252)
+	circle(x, y, 1);
+  }
 
-  // Angles for sin() and cos() start at 3 o'clock;
-  // subtract HALF_PI to make them start at the top
-  let s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI;
-  let m = map(minute() + norm(second(), 0, 60), 0, 60, 0, TWO_PI) - HALF_PI;
-  let h = map(hour() + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2) - HALF_PI;
+  for(let b = minute(); b < 60; b++){
+	let minute_angle = radians(b * 6) - HALF_PI;
+	let x = cx + cos(minute_angle) * secondsRadius;
+	let y = cy + sin(minute_angle) * secondsRadius;
+	stroke(105,105,105)
+	fill(105,105,105)
+	circle(x, y, 2);
+  }
 
-  // Draw the hands of the clock
-  stroke(255);
-  strokeWeight(1);
-  line(cx, cy, cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
-  strokeWeight(2);
-  line(cx, cy, cx + cos(m) * minutesRadius, cy + sin(m) * minutesRadius);
-  strokeWeight(4);
-  line(cx, cy, cx + cos(h) * hoursRadius, cy + sin(h) * hoursRadius);
+  // Draw circles representing hours
+  for (let c = 0; c <= hour(); c++) {
+    let hour_angle = radians(c * 15) - HALF_PI;
+    let q = cx + cos(hour_angle) * minutesRadius;
+	let w = cy + sin(hour_angle) * minutesRadius;
+	stroke(238, 241, 252)
+	fill(238, 241, 252)
+	circle(q, w, 1);
+  }
 
-  // Draw the minute ticks
-  strokeWeight(2);
-  beginShape(POINTS);
-  for (let a = 0; a < 360; a += 6) {
-    let angle = radians(a);
-    let x = cx + cos(angle) * secondsRadius;
-    let y = cy + sin(angle) * secondsRadius;
-    vertex(x, y);
+  for(let d = hour(); d < 24; d++){
+	let hour_angle = radians(d * 15) - HALF_PI;
+	let q = cx + cos(hour_angle) * minutesRadius;
+	let w = cy + sin(hour_angle) * minutesRadius;
+	stroke(105,105,105)
+	fill(105,105,105)
+	circle(q, w, 2);
   }
   
-  let millisecond = millis();
+  // Text in circle 
+  textSize(size);
+  fill(0, 0, 0); 
+  textAlign(CENTER, CENTER);
+  text(word, cx, cy);
 
-  if(frameCount % 60 == 0){
-    if(!inOut){
-      inOut = true;
-    }
-    else if(inOut){
-      inOut = false;
-    } 
+
+  // Every 4 seconds, change the state of the breathing circle
+  if (frameCount % 240 == 0){
+	if(state == 1){
+		state = 2;
+	}
+	else if(state == 2){
+		state = 3;
+	}
+	else if(state == 3){
+		state = 4;
+	}
+	else{
+		state = 1
+	}
   }
 
-  /*if (clockDiameter < 100) {
-    inOut = true;
-  } */ 
+  // Expands, holds, and retracts circle depending on state 
+  if (state == 1) {
+	secondsRadius = secondsRadius + .3
+	minutesRadius = minutesRadius + .3
+	clockDiameter++
+	r = r+ .4
+	g = g+ .4
 
-  if (inOut) {
-    clockDiameter++
+	word = 'inhale'
+	if(size < 100){
+		size = size + .2
+	}
   }
 
-  if (!inOut) {
-    clockDiameter--
+  if (state == 3) {
+	secondsRadius = secondsRadius - .3
+	minutesRadius = minutesRadius - .3
+	clockDiameter--
+	r = r - .4
+	g = g - .4
+	word = 'exhale'
+	size = size - .2
+  }
+
+  if(state == 2 || state == 4){
+	word = 'hold'
   }
   
   endShape();
 }
+
+// Resize circle to window size
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+ }
+
