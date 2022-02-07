@@ -1,0 +1,1097 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <script src="https://use.fontawesome.com/0b04c030ef.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" href=img/favicon.svg>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light navbar-thin">
+      <a class="navbar-brand" href="#"><i class="fas fa-seedling icon"></i></a>
+      <button class="navbar-toggler" id="expand-navs" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse navbar-thin"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#problem">Problem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#solution">Solution</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbar-phases"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Phases
+            </a>
+            <div
+              class="dropdown-menu"
+              id="phases-dropdown"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="nav-link" href="#research">Research</a>
+              <a class="nav-link" href="#synthesis">Synthesis</a>
+              <a class="nav-link" href="#prototyping">Prototyping</a>
+              <a class="nav-link" href="#testing">Testing</a>
+              <a class="nav-link" href="#results">Results</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#reflecting">Reflecting</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron remove-padding jumbotron-fluid green-gradient">
+      <div class="container section jumbotron-spacing section-phone">
+        <div class="jumbotron-sub-section sub-left">
+          <h1 class="lead jumbotron-header">Supporting Community Fridges</h1>
+          <h2 class="in-jumbotron">Knowledge Sharing in Mutual Aid Networks</h2>
+          <p class="jumbotron-smaller-text">
+            We created a web application that would allow community fridge
+            volunteers and organizers to share information and resources with
+            one another in a centralized and user friendly way. Our product is
+            an example of public interest technology because it aims to assist
+            mutual aid organizers who promote social good in their communities.
+          </p>
+        </div>
+        <div class="jumbotron-img-section sub-right">
+          <img
+            class="jumbotron-img"
+            src="img/jumbotron-image.png"
+            alt="Screenshot of customizable template from the web application"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section section-phone">
+        <div class="sub-section sub-section-phone">
+          <div class="small-text" id="overview">Overview</div>
+          <h2>About the Project</h2>
+
+          <p>
+            Inspired by the growing community fridge movement, we worked with
+            fridge organizers in New York City to provide a more consolidated
+            system of resource sharing across the fridge network while aligning
+            with their core values.
+          </p>
+        </div>
+
+        <div class="sub-section sub-section-phone">
+          <div class="small-text">Team</div>
+          <p>Sharon, Pazit, Francesca, Zoe, Rousol</p>
+          <div class="small-text">Tools</div>
+          <p>Figma, Flask, Bootstrap</p>
+          <div class="small-text">Timeline</div>
+          <p>3 months</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="problem">Background</div>
+          <h2>The Problem Space</h2>
+
+          <p>
+            Community fridges are mutual aid projects in which community members
+            stock and maintain publicly accessible fridges to provide food to
+            whoever needs it. The first fridge in NYC was set up in February of
+            2020 and since then the movement has grown to over 70 fridges. Since
+            this is a new and growing movement, organizers are constantly in the
+            process of figuring out what works and what does not. Due to the
+            autonomous and decentralized structure of community fridge networks,
+            each fridge has its own set of practices and resources. While
+            organizers often collaborate and learn from one another, there is no
+            openly accessible platform for resource sharing across all fridges
+            in a given area.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="solution">Design Opportunity</div>
+          <h2>Our Solution</h2>
+
+          <p>
+            Our solution to this problem is to develop a web app for resource
+            sharing amongst community organizers. The platform will allow
+            organizers to find and share resources with one another, such as
+            templates for business outreach and guides on how to address various
+            obstacles.
+          </p>
+        </div>
+      </div>
+
+      <div class="videoWrapper">
+        <iframe
+          width="560"
+          height="349"
+          src="https://www.youtube.com/embed/EvviRT_Z9j4"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="features">Key Features</div>
+          <h2>Product Walkthrough</h2>
+        </div>
+      </div>
+
+      <!-- KEY FEATURE SECTION (computer)-->
+
+      <div class="section not-on-mobile">
+        <div class="sub-section">
+          <img
+            class="sub-img"
+            src="img/guide-resource.png"
+            alt="Image: Screenshot of resources guides page from technical prototype"
+          />
+        </div>
+        <div class="sub-section">
+          <h2>Resource Guides</h2>
+          <p class="sub-title">
+            A centralized location for sharing resources between organizers.
+          </p>
+          <p>
+            Fridge organizers are able to add and read guides that they have on
+            navigating different obstacles and providing tips in one,
+            centralized location that supports their platform of mutual aid.
+          </p>
+        </div>
+      </div>
+
+      <div class="section not-on-mobile">
+        <div class="sub-section">
+          <img
+            class="sub-img"
+            src="img/template-feature.png"
+            alt="Image: Screenshot of resources individual template page from technical prototype"
+          />
+        </div>
+        <div class="sub-section" id="templates">
+          <h2>Templates</h2>
+          <p class="sub-title">
+            Reusable templates that can be personalized for organizers’ needs.
+          </p>
+          <p>
+            We’ve compiled reusable templates for organizers to reach out to
+            businesses in order to decrease the amount of repeated labor.
+            Additionally, our template builder helps personalize these templates
+            by automatically populating certain fields with the users’ input.
+          </p>
+        </div>
+      </div>
+
+      <div class="section not-on-mobile">
+        <div class="sub-section">
+          <img
+            class="sub-img"
+            src="img/forum-feature.png"
+            alt="Image: Screenshot of forum page from figma prototype"
+          />
+        </div>
+        <div class="sub-section">
+          <h2>Forum</h2>
+          <p class="sub-title">
+            Coming soon. A community forum to share tips and ask questions to
+            the community
+          </p>
+          <p>
+            A forum that serves as communication between organizers to ask
+            questions and share tips that encourage community and mutual-aid.
+          </p>
+        </div>
+      </div>
+
+      <!--KEY FEATURE SECTION MOBILE-->
+
+      <div class="section only-on-mobile section-phone">
+        <div class="section-phone">
+          <h2>Resource Guides</h2>
+          <p class="sub-title">
+            A centralized location for sharing resources between organizers.
+          </p>
+          <p>
+            Fridge organizers are able to add and read guides that they have on
+            navigating different obstacles and providing tips in one,
+            centralized location that supports their platform of mutual aid.
+          </p>
+        </div>
+        <div class="section-phone">
+          <img
+            class="sub-img"
+            src="img/guide-resource.png"
+            alt="Image: Screenshot of resources guides page from technical prototype"
+          />
+        </div>
+      </div>
+
+      <div class="section section-phone only-on-mobile">
+        <div class="section-phone" id="templates">
+          <h2>Templates</h2>
+          <p class="sub-title">
+            Reusable templates that can be personalized for organizers’ needs.
+          </p>
+          <p>
+            We’ve compiled reusable templates for organizers to reach out to
+            businesses in order to decrease the amount of repeated labor.
+            Additionally, our template builder helps personalize these templates
+            by automatically populating certain fields with the users’ input.
+          </p>
+        </div>
+        <div class="section-phone">
+          <img
+            class="sub-img"
+            src="img/template-feature.png"
+            alt="Image: Screenshot of resources individual template page from technical prototype"
+          />
+        </div>
+      </div>
+
+      <div class="section section-phone only-on-mobile">
+        <div class="section-phone">
+          <h2>Forum</h2>
+          <p class="sub-title">
+            Coming soon. A community forum to share tips and ask questions to
+            the community
+          </p>
+          <p>
+            A forum that serves as communication between organizers to ask
+            questions and share tips that encourage community and mutual-aid.
+          </p>
+        </div>
+        <div class="section-phone">
+          <img
+            class="sub-img"
+            src="img/forum-feature.png"
+            alt="Image: Screenshot of forum page from figma prototype"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron remove-padding jumbotron-fluid">
+      <img class="photo-jumbotron" src="img/all-img-banner.png" alt="" />
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text">Our Approach</div>
+          <h2>Process</h2>
+          <img
+            class="sub-img"
+            src="img/process-wide.png"
+            alt="Five stage process chart. Five stages are 1: Research, 2: Synthesis, 3: Prototyping, 4: Testing, 5: Results"
+          />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="research">Phase I: Research</div>
+
+          <h2>Background Research</h2>
+
+          <p>
+            Our research began with food insecurity, when a household has
+            limited or uncertain access to food. We focused our background
+            research on news articles and reports from NYC based organizations,
+            all of which were citing similar data that revealed food insecurity
+            has dramatically increased due to the pandemic. During the pandemic
+            in NYC, there has also been an amazing increase in mutual aid, or
+            community members helping and supporting one another without stigma
+            associated with charity. A mutual aid project to combat food
+            insecurity that grew in popularity during the pandemic are community
+            fridges, refrigerators located in a public space that provide fresh
+            free food to community members. The fridge is restocked by community
+            members (also known as community fridge organizers) and is open to
+            everyone, functioning in a policy of “Take what you need, leave what
+            you can.”
+          </p>
+          <br />
+          <img
+            class="sub-img"
+            src="img/background-research.png"
+            alt="Instagram post of Brownsville Free Fridge full of vegetables with words 'FREE FOOD' painted at the top"
+          />
+          <br />
+          <p>
+            After identifying community fridges in NYC as an area of interest,
+            we looked at articles to learn the details of how community fridges
+            operate and if technology could support them. Many of the articles
+            we found were features of community fridge organizers posted this
+            summer when the movement first began receiving attention from
+            websites like the New York Times.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Engagement</h2>
+
+          <p>
+            Since community fridges are a relatively new movement, there is a
+            sparse amount of information available about them online and once we
+            had gone through it all, we turned to Instagram to get in contact
+            with fridge organizers. Instagram is the primary platform where
+            community fridge organizers will post information and updates about
+            their respective fridges. We began by documenting all the community
+            fridge instagram accounts we came across and DM’ing them to request
+            interviews to learn more about their work.
+          </p>
+          <br />
+          <p>
+            Through interviews, we quickly learned that community fridges are
+            autonomous and decentralized, so each fridge operates and organizes
+            itself differently. Despite differences in how fridges operate,
+            there are common tasks that each fridge undertakes in order to
+            provide food to community members and we designed a diagram of the
+            Community Fridge Process to visualize these core commonalities.
+          </p>
+          <br />
+          <p>
+            In addition, we created four Personas and User Journey Maps in order
+            to capture high and low points organizers expressed in interviews.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid nav-jumbotron">
+      <ul
+        class="nav nav-tabs img-nav-tabs"
+        id="myTab-engagement"
+        role="tablist"
+      >
+        <li class="nav-item active">
+          <a
+            class="nav-link prototype-tab"
+            id="uj1-tab"
+            data-toggle="tab"
+            href="#uj1"
+            role="tab"
+            aria-controls="uj1"
+            aria-selected="false"
+            >User Journey Map 1</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link prototype-tab"
+            id="uj2-tab"
+            data-toggle="tab"
+            href="#uj2"
+            role="tab"
+            aria-controls="uj2"
+            aria-selected="false"
+            >User Journey Map 2</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link prototype-tab"
+            id="uj3-tab"
+            data-toggle="tab"
+            href="#uj3"
+            role="tab"
+            aria-controls="uj3"
+            aria-selected="false"
+            >User Journey Map 3
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link prototype-tab"
+            id="uj4-tab"
+            data-toggle="tab"
+            href="#uj4"
+            role="tab"
+            aria-controls="uj4"
+            aria-selected="false"
+            >User Journey Map 4</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link prototype-tab"
+            id="cf-process-tab"
+            data-toggle="tab"
+            href="#cf-process"
+            role="tab"
+            aria-controls="cf-process"
+            aria-selected="false"
+            >Process Diagram</a
+          >
+        </li>
+      </ul>
+      <div class="tabs-wrapper">
+        <div class="tab-content tab-style" id="myTabContent-engagement">
+          <div
+            class="tab-pane active"
+            id="uj1"
+            role="tabpanel"
+            aria-labelledby="uj1-tab"
+          >
+            <img
+              class="tabs-img"
+              src="img/uj1.png"
+              alt="User Journey Map for Aditi, a community fridge organizer for the Uptown Fridge with Scenario of Restocking the Fridge"
+            />
+          </div>
+          <div
+            class="tab-pane"
+            id="uj2"
+            role="tabpanel"
+            aria-labelledby="uj2-tab"
+          >
+            <img
+              class="tabs-img"
+              src="img/uj2.png"
+              alt="User Journey Map for Diana, a volunteer restocker for fridge on Grand street between Pitt and Bialystocker with Scenario of Restocking the Fridge"
+            />
+          </div>
+          <div
+            class="tab-pane"
+            id="uj3"
+            role="tabpanel"
+            aria-labelledby="uj3-tab"
+          >
+            <img
+              class="tabs-img"
+              src="img/uj3.png"
+              alt="User Journey Map for Kari, a community fridge organizer for the Peoples' Fridge with Scenario of Maintaining the Fridge"
+            />
+          </div>
+          <div
+            class="tab-pane"
+            id="uj4"
+            role="tabpanel"
+            aria-labelledby="uj4-tab"
+          >
+            <img
+              class="tabs-img"
+              src="img/uj4.png"
+              alt="User Journey Map for Thadeaus, a community organizer with In Our Hearts, a newtowk of autonomous collectives in NYC, with Scenario of Organizing Distribution when big donations are received"
+            />
+          </div>
+
+          <div
+            class="tab-pane"
+            id="cf-process"
+            role="tabpanel"
+            aria-labelledby="cf-process-tab"
+          >
+            <img
+              class="tabs-img"
+              src="img/cf-process.png"
+              alt="A diagram detailing the set-up, operations, and pick-up required for running a community fridge"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <div class="sub-section">
+          <h2>Research: Guiding PIT Question</h2>
+          <p>
+            Is focusing on organizers and volunteers the right approach? If not,
+            what perspectives are missing from our research?
+          </p>
+          <br />
+          <p>
+            The direction our project took was limited to who we were able to
+            interview. All of the information we gathered and interviews we
+            conducted focused on community fridge organizers and their
+            experience with maintaining a community fridge. We were not able to
+            identify and interview other stakeholders of a community fridge,
+            such as food insecure populations and/or people who utilize
+            community fridges. While organizers are easily contactable online
+            via instagram, there is no way to know who is using fridges. Since
+            that is a perspective we were missing, it heavily influenced the
+            direction we continued in.
+          </p>
+        </div>
+      </div>
+
+      <div class="hr-wrapper">
+        <hr />
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="synthesis">Phase II: Synthesis</div>
+          <h2>Tracing How Might We's</h2>
+
+          <img
+            class="sub-img sub-img-margin"
+            src="img/hmw.png"
+            alt="Three How Might We Questions:
+              First How Might We: How might we create a more efficient and standardized scheduling process to connect community fridges with volunteers? 
+              Second How Might We: How might we create a more seamless process of ensuring that food is distributed evenly across community fridge networks?
+              Third How Might We: How might we help community fridges form more consistent, long-term relationships with its food sources?"
+          />
+          <p>
+            After interviewing ten community fridge organizers and creating four
+            user journey maps, we came up with a list of 14 themes that captured
+            common pain points in the community fridge process. In order to
+            narrow these themes to the most relevant few, we designed an
+            affinity map that grouped insightful quotes from all ten interviews
+            based on the theme they expressed. With the help of the affinity
+            map, we were able to identify eight themes that had been brought up
+            the most in interviews and from there we ideated on one way we could
+            potentially target or address this theme. We also looked at previous
+            solutions to these themes and identified the pros and cons of each.
+            Once we had a more comprehensive picture of the needs and obstacles
+            of community organizers, as well as potential solutions, we
+            developed three How Might We statements that captured overarching
+            themes we felt we could meaningfully address this semester. For each
+            How Might We, we brainstormed 30 ideas and used a mindmap to
+            visualize where they branch off from one another. We then narrowed
+            them down to five coherent and varied ideas per How Might We and
+            identified the risks of each.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Synthesis: Guiding PIT Question</h2>
+          <p>Are there any unintended consequences in our how might we’s?</p>
+          <br />
+          <p>
+            When deciding which themes and directions to pursue, we were
+            critical of potential negative impacts. For example, if we focused
+            on increasing outreach and community awareness of fridges, could the
+            over-promotion lead to too many community members depending on or
+            taking food from the fridge, to the point where it might be unable
+            to sustain itself? Additionally, we were hesitant to go in a
+            direction that could lead to the over-standardization and
+            organization of fridges because if there is too much organization,
+            fridges may need to register government entities or non-profits,
+            which can be difficult or lead to taxation struggles.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid nav-jumbotron">
+      <ul class="nav nav-tabs img-nav-tabs" id="myTab-synthesis" role="tablist">
+        <li class="nav-item active">
+          <a
+            class="nav-link prototype-tab"
+            id="mind-maps-tab"
+            data-toggle="tab"
+            href="#mind-maps"
+            role="tab"
+            aria-controls="mind-maps"
+            aria-selected="false"
+            >Mind Maps</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link prototype-tab"
+            id="affinity-map-tab"
+            data-toggle="tab"
+            href="#affinity-map"
+            role="tab"
+            aria-controls="affinity-map"
+            aria-selected="false"
+            >Affinity Map</a
+          >
+        </li>
+      </ul>
+      <div class="tabs-wrapper">
+        <div class="tab-content tab-style" id="myTabContent-synthesis">
+          <div
+            class="tab-pane active"
+            id="mind-maps"
+            role="tabpanel"
+            aria-labelledby="mind-maps-tab"
+          >
+            <img
+              class="tabs-img"
+              src="img/mindmaps.png"
+              alt="3 mind maps showing at least 30 ideas stemming from each how might we question"
+            />
+          </div>
+          <div
+            class="tab-pane"
+            id="affinity-map"
+            role="tabpanel"
+            aria-labelledby="affinity-map-tab"
+          >
+            <img
+              class="tabs-img"
+              src="img/post-its.png"
+              alt="image of post-its detailing feedback and ideas from users"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hr-wrapper">
+        <hr />
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="prototyping">Phase III: Prototyping</div>
+
+          <h2>Research impact</h2>
+
+          <p>
+            Based on the main pain points expressed to us by community fridge
+            organizers, we narrowed down our potential product to four ideas: a
+            scheduling app, a physical sensor to track fridge emptiness, a
+            collaboration with an existing application, and a living resource
+            document. We created low-fidelity wireframes for each of these
+            designs. The scheduling app would have created a single location for
+            volunteers and organizers to coordinate restocking shifts with one
+            another; the sensors would have been physically attached to each
+            fridge to track how long the fridge was opened for, in order to
+            judge emptiness intervals; the collaboration with an existing
+            application would have focused on connecting local businesses with
+            community fridges; and the living resource document would allow
+            community fridges to share various resources, templates, and
+            information with one another to help the community fridge network
+            flourish.
+            <br />
+            Eventually, we settled on moving forward with the resource document,
+            based on subsequent user tests in which we asked our target users
+            about how effective and how helpful they anticipated each design
+            being for them. While our interviewees were split on the resource
+            document versus an app, we realized that a place for community
+            fridges to share resources with one another upheld the core tenets
+            of the mutual aid structure, despite being somewhat less flashy than
+            an app. It had also become clear that organizers would be hesitant
+            to download another app, since the organization process is already
+            spread out across several platforms. Once we settled on a single
+            design, we decided based on user interviews that email templates,
+            resource guides, and a community forum would be the most useful
+            sections to include.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Prototyping: Guiding PIT Question</h2>
+          <p>
+            Is our design familiar, accessible, and conducive to
+            knowledge-sharing?
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Visual Language and Design</h2>
+
+          <p>
+            Our prototype utilizes a blue and green color palette, as well as a
+            rounded, cartoonish theme throughout. Originally, we considered
+            using a more minimalist, “cleaner” design, but decided that the
+            colors and fun icons were more appealing based on initial user
+            tests. In terms of the layout, we looked to familiar websites that
+            served similar purposes to our own for inspiration, such as
+            Dribbble, Ladder, and others.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid nav-jumbotron">
+      <ul class="nav nav-tabs img-nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item active">
+          <a
+            class="nav-link prototype-tab"
+            id="lo-fi-tab"
+            data-toggle="tab"
+            href="#lo-fi"
+            role="tab"
+            aria-controls="lo-fi"
+            aria-selected="false"
+            >Lo-Fi</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link prototype-tab"
+            id="mid-fi-tab"
+            data-toggle="tab"
+            href="#mid-fi"
+            role="tab"
+            aria-controls="mid-fi"
+            aria-selected="false"
+            >Mid-Fi</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link prototype-tab"
+            id="hi-fi-tab"
+            data-toggle="tab"
+            href="#hi-fi"
+            role="tab"
+            aria-controls="hi-fi"
+            aria-selected="false"
+            >Hi-fi</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content tab-style" id="myTabContent">
+        <div
+          class="tab-pane active"
+          id="lo-fi"
+          role="tabpanel"
+          aria-labelledby="lo-fi-tab"
+        >
+          <img
+            class="tabs-img"
+            src="img/lo-fi.png"
+            alt="Low Fidelity Prototype: Initial Sketches on paper"
+          />
+        </div>
+        <div
+          class="tab-pane"
+          id="mid-fi"
+          role="tabpanel"
+          aria-labelledby="template-builder-tab"
+        >
+          <img
+            class="tabs-img"
+            src="img/mid-fi.png"
+            alt="Medium Fidelity Prototype: Figma wireframes of each page without color"
+          />
+        </div>
+        <div
+          class="tab-pane"
+          id="hi-fi"
+          role="tabpanel"
+          aria-labelledby="guides-tab"
+        >
+          <img
+            class="tabs-img"
+            src="img/hi-fi.png"
+            alt="High Fidelity Prototype: Images of final wireframes considered for technical prototype"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hr-wrapper">
+        <hr />
+      </div>
+
+      <div class="hr-wrapper">
+        <hr />
+      </div>
+
+      <div class="section">
+        <div class="sub-section" id="testing">
+          <h2>User Testing</h2>
+
+          <p>
+            For the user testing phase we wanted to ensure that the target
+            audience remained in focus as we were testing. We tested six
+            community fridge organizers, three different times, each time with a
+            further developed prototype that reflected their input and ideas.
+          </p>
+          <br />
+          <p>
+            The feedback we received about the prototype highlighted its need
+            within the community. This feedback was critical in our development
+            process.
+          </p>
+          <img
+            class="sub-img sub-img-margin"
+            src="img/painpoints.png"
+            alt="Image with quotes from users about pain points and summaries. 
+              First quote: people are always DM’ing us and we get the same questions over and over, this would be great to direct them to.
+              First Summary: Need for a centralized place for shared questions.
+              Second quote: how can we get more organized? I already used slack but it’s so unorganized.
+              Second Summary: Need for more organization in sharing information. 
+              Third quote: How do i get someone from my crew to link up with other fridges.
+              Third Summary: Need more communication between fridges."
+          />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="results">Results</div>
+          <h2>Final Design</h2>
+          <h3>
+            Designing a centralized and accessible living document to share
+            resources between community fridges organizers
+          </h3>
+          <p>
+            We created a technical protoype of our final solution using Flask
+            and Bootstrap, and have illustrated some of the key features below.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Landing</h2>
+
+          <p>
+            Our landing page shows the key features of our website resources,
+            and allows for easy access to our getting started page that gives an
+            introduction to our goal and team.
+          </p>
+          <img
+            class="sub-img"
+            src="img/final-landing.png"
+            alt="Images of landing pages for overall site, as well as guides, templates, and forum pages"
+          />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Resource Guides</h2>
+
+          <p>Organizers have the ability to add guides and search guides.</p>
+          <img
+            class="sub-img"
+            src="img/final-guides.png"
+            alt="Image of resource guides with key features labeled: filter and search guides, button to add guides, click into guides"
+          />
+          <br />
+          <img
+            class="sub-img"
+            src="img/final-guides2.png"
+            alt="Image of full guides page next to image of the add guide pop-up for users to enter information about they guide they want to add"
+          />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Templates</h2>
+
+          <p>
+            Organizers have the ability to look at reusable templates we have
+            compiled, and use our template builder to customize it for their own
+            needs.
+          </p>
+          <img
+            class="sub-img"
+            src="img/final-templates.png"
+            alt="Image of sample reusable template that allows for instant customization (from technical prototype)"
+          />
+          <br />
+          <img
+            class="sub-img"
+            src="img/final-templates2.png"
+            alt="Three small images showing the template landing page where all templates are displayed, a customizable template before customization and after customization"
+          />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <h2>Forum: Coming Soon</h2>
+
+          <p>
+            We are still iterating over creating a community forum, which our
+            organizers expressed great interest in. This is currently prototyped
+            in our Figma, and allows users to ask questions to the community,
+            answer questions, and share tips.
+          </p>
+          <img
+            class="sub-img"
+            src="img/final-forum.png"
+            alt="Image of forum feature with place for users to ask questions at the top and view and answer questions below"
+          />
+        </div>
+      </div>
+
+      <div class="hr-wrapper">
+        <hr />
+      </div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text" id="reflecting">Reflecting</div>
+          <h2>PIT Design Process Reflection</h2>
+          <p class="sub-title">
+            Since different community organizers had different needs, it was
+            difficult to make decisions that wouldn’t meet every organizer’s
+            needs. We ultimately decided to choose a solution that would be most
+            inclusive and accessible for our users.
+          </p>
+          <p>
+            As we went through the design process, different community
+            organizers were drawn to different solutions. We realized that our
+            prototype was not going to be able to accommodate everyone’s needs
+            equally or solve every need that we found. Instead, we had to decide
+            which subset of the user group we wanted to have an impact on in
+            order to focus our solution on their needs. Even though some
+            organizers preferred other solutions, almost all expressed worry
+            about the ‘buy-in’ of downloading another app. As such, we decided
+            to focus on the living resource guide over the scheduling app, as
+            this seemed to be the most open and inclusive solution. Furthermore,
+            we wanted to consistently keep in mind what technology our users
+            would use, since public interest technology should first and
+            foremost be accessible to our users.
+          </p>
+          <br />
+          <p class="sub-title">
+            Our ultimate goal of public interest technology was promoting social
+            good by supporting community fridges, so we wanted to always make
+            sure our interests were aligned with their needs. In particular, we
+            consistently considered how to balance the organizers’ desires for a
+            decentralized system and creating a more standardized system for
+            resource sharing.
+          </p>
+          <p>
+            Taking a user-centered approach to our design allowed for us to
+            engage with the target audience early on and throughout the process.
+            This led us to have a more impactful design process and a better
+            understanding of the pain points within the community fridge
+            networks. There were also unique considerations our organizers
+            brought up in our interviews with them that we had not previously
+            considered. For example, our design needed to align with the
+            mutual-aid framework of community fridges and work within their
+            decentralized system. Rather than designing based on our limited
+            knowledge, user centered design allowed us to ensure our final
+            product was aligned with our communities goals.
+          </p>
+          <br />
+          <p class="sub-title">
+            While it was challenging at times, we learned the value in sitting
+            with our problem space rather than jumping to solutions by following
+            the design process.double diamond.
+          </p>
+          <p>
+            The Double diamond design process created a structure that allowed
+            us to anticipate what was coming next, yet at some points we found
+            it challenging to not move ahead. When the team was trying to
+            conduct interviews to identify problems, we were also thinking ahead
+            and taking suggestions for solutions when we should have remained
+            focused on the “define” stage, rather than ideation. In order to
+            remain within the structure, we had to be intentional to not jump
+            ahead before we fully explored and defined the problem.
+          </p>
+          <br />
+          <p class="sub-title">
+            A question that came up throughout the process and we advise
+            technologists in public interest technology to consider is around
+            commitment and longevity of involvement with the product and the
+            community.
+          </p>
+
+          <ul>
+            <li>
+              In what ways are you considering reciprocation in terms of your
+              user's time and efforts?
+            </li>
+            <li>How do we ensure it stays relevant to the community?</li>
+            <li>How do we maintain the product after the initial handoff?</li>
+            <li>
+              What will your commitment be to the community and the technology
+              you design?
+            </li>
+          </ul>
+
+          <br />
+          <p></p>
+        </div>
+      </div>
+
+      <div class="hr-wrapper"><hr /></div>
+
+      <div class="section">
+        <div class="sub-section">
+          <div class="small-text">Giving Thanks</div>
+          <h2>Acknowledgements</h2>
+          <p>
+            We would like to thank the numerous community fridge organizers who
+            were willing to speak to us multiple times in order to bring this
+            design together. Thank you to Daniel from Mott Haven Community
+            Fridge, Genesis from Jamaica Community Fridge, SG from the Uptown
+            Fridge, Ernest from Freedge, Thadeaus from In Our Hearts, Lea from
+            the Chelsea Fridge, Atlantis from 120MMM, and other organizers and
+            volunteer restockers who helped us during the research stage. We
+            would also like to thank Celeste Layne for mentoring us throughout
+            this semester.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
